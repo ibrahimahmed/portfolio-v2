@@ -1,11 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { FcBriefcase, FcBusinessman, FcCustomerSupport, FcHome, FcList, FcServices, FcSurvey } from "react-icons/fc";
 import { AiOutlineClose, AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export const NavBar = () => {
+    const [nav, setNav] = useState(false);
+
+    // handle navigation
+    const handleNav = () => {
+        setNav(!nav);
+    }
+
     return (
         <div className='fixed w-full h-20 shadow-xl z-[100]'>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
@@ -49,18 +56,19 @@ export const NavBar = () => {
                             </li>
                         </Link>
                     </ul>
-                    <div className='md:hidden'>
+                    <div onClick={handleNav} className='md:hidden'>
                         <FcList size={25} />
                     </div>
                 </div>
             </div>
 
-            <div className='fixed left-0 top-0 w-full h-screen bg-white/60'>
-                <div className='fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#17171f] p-10 ease-in duration-500'>
+            <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-white/60' : ''}>
+                <div className={nav ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#17171f] p-10 ease-in duration-500'
+                    : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
                     <div>
                         <div className='flex w-full items-center justify-between'>
                             <Image src='/assets/LogoFinal.png' width='250' height='180' />
-                            <div className='rounded-full shadow-lg shadow-neutral-600 p-3 cursor-pointer'>
+                            <div onClick={handleNav} className='rounded-full shadow-lg shadow-neutral-600 p-3 cursor-pointer'>
                                 <AiOutlineClose />
                             </div>
                         </div>
