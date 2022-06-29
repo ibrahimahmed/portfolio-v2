@@ -16,42 +16,51 @@ export const NavBar = () => {
     return (
         <div className='fixed w-full h-20 shadow-xl z-[100]'>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-                <Image src='/assets/LogoFinal.png' width='200' height='160' />
-                <div>
+                <Link href='/'>
+                    <a>
+                        <Image
+                            src='/assets/IA1.svg'
+                            alt='/'
+                            width='200'
+                            height='80'
+                            className='cursor-pointer'
+                        />
+                    </a>
+                </Link>                <div>
                     <ul className='hidden md:flex'>
                         <Link href='/' >
-                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline-flex'>
-                                <FcHome size={20} className="self-center w-5 h-5 rounded-full mx-1" />
+                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline'>
+                                <FcHome size={20} className="self-center w-5 h-5 rounded-full mx-1 inline" />
                                 Home
                             </li>
                         </Link>
                         <Link href='/' >
-                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline-flex'>
-                                <FcBusinessman size={20} className="self-center w-5 h-5 rounded-full mx-1" />
+                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline'>
+                                <FcBusinessman size={20} className="self-center w-5 h-5 rounded-full mx-1 inline" />
                                 About ME
                             </li>
                         </Link>
                         <Link href='/' >
-                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline-flex'>
-                                <FcBriefcase size={20} className="self-center w-5 h-5 rounded-full mx-1" />
+                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline'>
+                                <FcBriefcase size={20} className="self-center w-5 h-5 rounded-full mx-1 inline" />
                                 Projects
                             </li>
                         </Link>
                         <Link href='/' >
-                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline-flex'>
-                                <FcServices size={20} className="self-center w-5 h-5 rounded-full mx-1" />
+                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline'>
+                                <FcServices size={20} className="self-center w-5 h-5 rounded-full mx-1 inline" />
                                 Skills
                             </li>
                         </Link>
                         <Link href='/' >
-                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline-flex'>
-                                <FcSurvey size={20} className="self-center w-5 h-5 rounded-full mx-1" />
+                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline '>
+                                <FcSurvey size={20} className="self-center w-5 h-5 rounded-full mx-1 inline" />
                                 Experience
                             </li>
                         </Link>
                         <Link href='/' >
-                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline-flex'>
-                                <FcCustomerSupport size={20} className="self-center w-5 h-5 rounded-full mx-1" />
+                            <li className='ml-10 text-sm uppercase hover:border-b hover:bg-[#00c690] font-bold py-2 px-4 rounded-xl inline'>
+                                <FcCustomerSupport size={20} className="self-center w-5 h-5 rounded-full mx-1 inline" />
                                 Contact Me
                             </li>
                         </Link>
@@ -67,7 +76,16 @@ export const NavBar = () => {
                     : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
                     <div>
                         <div className='flex w-full items-center justify-between'>
-                            <Image src='/assets/LogoFinal.png' width='250' height='180' />
+                            <Link href='/'>
+                                <a>
+                                    <Image
+                                        src='/assets/IA1.svg'
+                                        width='125'
+                                        height='50'
+                                        alt='/'
+                                    />
+                                </a>
+                            </Link>
                             <div onClick={handleNav} className='rounded-full shadow-lg shadow-neutral-600 p-3 cursor-pointer'>
                                 <AiOutlineClose />
                             </div>
@@ -116,7 +134,6 @@ export const NavBar = () => {
                             <Link href='/'>
                                 <li className='py-4 text-sm hover:border-b hover:bg-[#00c690] font-bold px-4 rounded-xl '>
                                     <FcCustomerSupport size={20} className="self-center w-4 h-4 rounded-full mx-0.5 inline" />
-
                                     Contact Us
                                 </li>
                             </Link>
